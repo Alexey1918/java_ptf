@@ -1,6 +1,0 @@
-ru/stqa/ptf/sandbox/MyFirst.java
- ru.stqa.ptf.sandbox.MyFirst
-ru/stqa/ptf/sandbox/Square.java
- ru.stqa.ptf.sandbox.Square
-ru/stqa/ptf/sandbox/Point.java
- ru.stqa.ptf.sandbox.Point

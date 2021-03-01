@@ -12,8 +12,5 @@ public class MyFirst{
          Square c = new Square(5);
          System.out.println("Площадь равна " + c.area());
 
-
-
-
    }
 }
