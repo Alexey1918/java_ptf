@@ -1,7 +1,8 @@
-package ru.stqa.ptf.sandbox;
+package ru.stqa.ptf.addressbook.sandbox;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class SquareTests {
 
@@ -9,6 +10,6 @@ public class SquareTests {
     public void testArea(){
 
         Square c = new Square(5);
-        Assert.assertEquals(c.area(),25);
+        Assert.assertEquals(c.area(),25.0);
     }
 }

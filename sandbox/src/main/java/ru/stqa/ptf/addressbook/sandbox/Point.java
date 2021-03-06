@@ -1,4 +1,4 @@
-package ru.stqa.ptf.sandbox;
+package ru.stqa.ptf.addressbook.sandbox;
 
 public class Point {
 
