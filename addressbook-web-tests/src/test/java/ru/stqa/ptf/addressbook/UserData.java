@@ -1,6 +1,6 @@
 package ru.stqa.ptf.addressbook;
 
-public class UserData {
+public class UserData extends TestBase{
     private final String firstname;
     private final String middlename;
     private final String home;
