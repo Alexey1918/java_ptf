@@ -67,15 +67,15 @@ public class TestBase {
 
 
     //Тестовые методы для UserTestCase//***********************
-    public void returnToPage() {
+    protected void returnToPage() {
         wd.findElement(By.linkText("home page")).click();
     }
 
-    public void submitUserCreation() {
+    protected void submitUserCreation() {
         wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
     }
 
-    public void fillUserForm(UserData userData) {
+    protected void fillUserForm(UserData userData) {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
         wd.findElement(By.name("firstname")).sendKeys(userData.getFirstname());
@@ -87,7 +87,7 @@ public class TestBase {
         wd.findElement(By.name("home")).sendKeys(userData.getHome());
     }
 
-    public void initUserCreation() {
+    protected void initUserCreation() {
         wd.findElement(By.linkText("add new")).click();
     }
     //Тестовые методы для UserTestCase//***********************
@@ -96,11 +96,11 @@ public class TestBase {
 
     //Тестовые методы для CreateDelationTests//***********************
 
-    public void deleteGroup() {
+    protected void deleteGroup() {
         wd.findElement(By.xpath("(//input[@name='delete'])[2]")).click();
     }
 
-    public void selectGroup() {
+    protected void selectGroup() {
         wd.findElement(By.name("selected[]")).click();
     }
     //Тестовые методы для CreateDelationTests//***********************
