@@ -1,6 +1,8 @@
-package ru.stqa.ptf.addressbook;
+package ru.stqa.ptf.addressbook.model;
 
-public class UserData extends TestBase{
+import ru.stqa.ptf.addressbook.tests.TestBase;
+
+public class UserData extends TestBase {
     private final String firstname;
     private final String middlename;
     private final String home;

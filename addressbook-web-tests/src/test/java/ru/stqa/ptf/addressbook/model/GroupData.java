@@ -1,6 +1,8 @@
-package ru.stqa.ptf.addressbook;
+package ru.stqa.ptf.addressbook.model;
 
-public class GroupData extends TestBase{
+import ru.stqa.ptf.addressbook.tests.TestBase;
+
+public class GroupData extends TestBase {
     private final String name;
     private final String header;
     private final String footer;
