@@ -1,3 +1,4 @@
+
 package ru.stqa.ptf.addressbook.model;
 
 import ru.stqa.ptf.addressbook.tests.TestBase;
@@ -6,6 +7,7 @@ public class UserData extends TestBase {
     private final String firstname;
     private final String middlename;
     private final String home;
+
 
     public UserData(String firstname, String middlename, String home) {
         this.firstname = firstname;
@@ -25,3 +27,4 @@ public class UserData extends TestBase {
         return home;
     }
 }
+

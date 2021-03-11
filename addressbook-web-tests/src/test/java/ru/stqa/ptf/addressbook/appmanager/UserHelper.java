@@ -11,8 +11,9 @@ public class UserHelper extends HelperBase{
 
     //Методы для UserDelationTests//
     public void selectUserCheckbox() {
-        click(By.xpath("//table[@id='maintable']/tbody/tr[4]/td/input"));
+        click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td/input"));
     }
+
     public void delationUser() {
         click(By.xpath("(//input[@value='Delete'])"));
     }
@@ -28,7 +29,6 @@ public class UserHelper extends HelperBase{
     public void initUserCreation() {
         wd.findElement(By.linkText("add new")).click();
     }
-
     public void fillUserForm(UserData userData) {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
@@ -40,15 +40,46 @@ public class UserHelper extends HelperBase{
         wd.findElement(By.name("home")).clear();
         wd.findElement(By.name("home")).sendKeys(userData.getHome());
     }
-
     public void submitUserCreation() {
         wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
     }
-
-    public void returnToPage() {
-        wd.findElement(By.linkText("home page")).click();
-    }
+    public void returnToPage() { wd.findElement(By.linkText("home page")).click(); }
     //**********************************************//
+
+
+
+
+
+    //Методы для editUser//
+    public void editUserCheckbox(){
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void updateUser(){
+        click(By.xpath("//input[@name='update']"));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //input[@id='21']
 
 
 
