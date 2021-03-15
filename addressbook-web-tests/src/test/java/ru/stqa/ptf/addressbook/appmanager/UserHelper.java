@@ -2,6 +2,7 @@ package ru.stqa.ptf.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import ru.stqa.ptf.addressbook.model.GroupData;
 import ru.stqa.ptf.addressbook.model.UserData;
 
 public class UserHelper extends HelperBase{
@@ -43,11 +44,9 @@ public class UserHelper extends HelperBase{
     public void submitUserCreation() {
         wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
     }
+
     public void returnToPage() { wd.findElement(By.linkText("home page")).click(); }
     //**********************************************//
-
-
-
 
 
     //Методы для editUser//
@@ -59,32 +58,14 @@ public class UserHelper extends HelperBase{
         click(By.xpath("//input[@name='update']"));
     }
 
+    public boolean isThereAUser() {
+        return isElementPresent(By.xpath("//table[@id='maintable']/tbody/tr[2]/td/input"));
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //input[@id='21']
-
-
-
-
-
-
-
+    public void createUser(UserData user) {
+        initUserCreation();
+        fillUserForm(user);
+        submitUserCreation();
+        returnToPage();
+    }
 }
