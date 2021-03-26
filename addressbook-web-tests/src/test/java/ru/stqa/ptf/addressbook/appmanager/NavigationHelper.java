@@ -12,4 +12,8 @@ public class NavigationHelper extends HelperBase{
     public void gotoGroupPege() {
         click(By.linkText("groups"));
     }
+
+    public void gotoHomePage() {
+        click(By.linkText("home"));
+    }
 }

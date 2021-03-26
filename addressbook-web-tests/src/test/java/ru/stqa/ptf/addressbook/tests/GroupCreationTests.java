@@ -1,14 +1,27 @@
 package ru.stqa.ptf.addressbook.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.ptf.addressbook.model.GroupData;
 
-public class GroupCreationTests extends TestBase {
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
 
+public class GroupCreationTests extends TestBase {
 
     @Test
     public void testGroupCreation() throws Exception {
         app.getNavigationHelper().gotoGroupPege();
-        app.getGroupHelper().createGroup(new GroupData("test1", "test2", "test3"));
+        List<GroupData> before = app.getGroupHelper().getGroupList();
+        GroupData group = new GroupData("test1", "test2", "test3");
+        app.getGroupHelper().createGroup(group);
+        List<GroupData> after = app.getGroupHelper().getGroupList();
+        Assert.assertEquals(after.size(),before.size() + 1);
+
+        group.setId(after.stream().max((Comparator.comparingInt(GroupData::getId))).get().getId());
+        before.add(group);
+        Assert.assertEquals(new HashSet<Object>(before),new HashSet<Object>(after));
+
     }
 }
