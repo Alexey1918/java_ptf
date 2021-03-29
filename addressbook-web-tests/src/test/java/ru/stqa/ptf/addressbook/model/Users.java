@@ -4,11 +4,11 @@ import com.google.common.collect.ForwardingSet;
 import java.util.HashSet;
 import java.util.Set;
 
-/*public class Users extends ForwardingSet<UserData> {
+public class Users extends ForwardingSet<UserData> {
 
     private Set<UserData> delegate;
 
-    public Users(Users users) { this.delegate = new HashSet<GroupData>(users.delegate); }
+    public Users(Users users) { this.delegate = new HashSet<UserData>(users.delegate); }
 
     public Users() { this.delegate = new HashSet<UserData>(); }
 
@@ -28,5 +28,5 @@ import java.util.Set;
         users.remove(user);
         return users;
     }
-}*/
+}
 

@@ -9,6 +9,7 @@ public class GroupData extends TestBase {
     private  String header;
     private  String footer;
 
+
     public GroupData withName(String name) {
         this.name = name;
         return this;
@@ -24,9 +25,12 @@ public class GroupData extends TestBase {
         return this;
     }
 
-    public int getId() { return id; }
+    public GroupData withId(int id) {
+        this.id = id;return this;
+    }
 
-    public GroupData withId(int id) { this.id = id;return this; }
+
+    public int getId() { return id; }
 
     public String getName() {
         return name;
@@ -39,6 +43,7 @@ public class GroupData extends TestBase {
     public String getFooter() {
         return footer;
     }
+
 
     @Override
     public boolean equals(Object o) {

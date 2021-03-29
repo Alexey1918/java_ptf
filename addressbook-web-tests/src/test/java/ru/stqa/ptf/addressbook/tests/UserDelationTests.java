@@ -3,9 +3,11 @@ package ru.stqa.ptf.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import ru.stqa.ptf.addressbook.model.GroupData;
 import ru.stqa.ptf.addressbook.model.UserData;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class UserDelationTests extends TestBase {
 
@@ -13,22 +15,22 @@ public class UserDelationTests extends TestBase {
     public void ensurePreconditions(){
 
         app.goTo().gotoHomePage();
-        if (app.user().userList().size()==0) {
-            app.user().create(new UserData("Elena", null, "892616601235"));
+        if (app.user().all().size()==0) {
+            app.user().create(new UserData().withFirstName("Lena"));
         }
     }
 
     @Test
     public void testGroupDelation() throws Exception {
 
-        List<UserData> before = app.user().userList();
-        int index = before.size()-1;
-        app.user().delete(index);
+        Set<UserData> before = app.user().all();
+        UserData deleteUser = before.iterator().next();
+        app.user().delete(deleteUser);
+        Set<UserData> after = app.user().all();
 
-        List<UserData> after = app.user().userList();
-        Assert.assertEquals(after.size(), before.size() - 1);
-        before.remove(index);
-        Assert.assertEquals(before, after);
-        Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+        Assert.assertEquals(after.size(),before.size() - 1);
+
+        before.remove(deleteUser);
+        Assert.assertEquals(after,before);
     }
 }
