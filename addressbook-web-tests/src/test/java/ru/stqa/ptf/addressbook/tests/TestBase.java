@@ -1,19 +1,18 @@
 package ru.stqa.ptf.addressbook.tests;
-
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import ru.stqa.ptf.addressbook.appmanager.ApplicationManager;
 
 public class TestBase {
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected static final ApplicationManager app = new ApplicationManager();
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeSuite
     public void setUp() throws Exception {
         app.init();
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterSuite
     public void tearDown() throws Exception {
         app.stop();
 

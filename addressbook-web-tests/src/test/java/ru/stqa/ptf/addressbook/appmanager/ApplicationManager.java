@@ -1,12 +1,9 @@
 package ru.stqa.ptf.addressbook.appmanager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
-import ru.stqa.ptf.addressbook.model.UserData;
-
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -38,15 +35,14 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public GroupHelper getGroupHelper() {
+    public GroupHelper group() {
         return groupHelper;
     }
 
-    public UserHelper getUserHelper() { return userHelper; }
+    public UserHelper user() { return userHelper; }
 
-    public NavigationHelper getNavigationHelper() {
+    public NavigationHelper goTo() {
         return navigationHelper;
     }
-
 
 }

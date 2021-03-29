@@ -1,15 +1,13 @@
 
 package ru.stqa.ptf.addressbook.model;
-
 import ru.stqa.ptf.addressbook.tests.TestBase;
-
 import java.util.Objects;
 
 public class UserData extends TestBase {
     private int id;
-    private final String firstname;
-    private final String lastname;
-    private final String home;
+    private  String firstname;
+    private  String lastname;
+    private  String home;
 
 
     public UserData(String firstname, String lastname, String home) {
@@ -24,6 +22,43 @@ public class UserData extends TestBase {
         this.lastname = lastname;
         this.home = home;
         this.id = id;
+    }
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getHome() {
+        return home;
+    }
+
+    public UserData withFirstName(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
+
+    public UserData withLastName(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public UserData withHome(String home) {
+        this.home = home;
+        return this;
     }
 
     @Override
@@ -48,25 +83,6 @@ public class UserData extends TestBase {
         return Objects.hash(id, firstname, lastname);
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public String getMiddlename() {
-        return lastname;
-    }
-
-    public String getHome() {
-        return home;
-    }
 
 
 }

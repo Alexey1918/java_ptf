@@ -1,27 +1,22 @@
 package ru.stqa.ptf.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.ptf.addressbook.model.GroupData;
-
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
+import ru.stqa.ptf.addressbook.model.Groups;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GroupCreationTests extends TestBase {
 
     @Test
     public void testGroupCreation() throws Exception {
-        app.getNavigationHelper().gotoGroupPege();
-        List<GroupData> before = app.getGroupHelper().getGroupList();
-        GroupData group = new GroupData("test1", "test2", "test3");
-        app.getGroupHelper().createGroup(group);
-        List<GroupData> after = app.getGroupHelper().getGroupList();
-        Assert.assertEquals(after.size(),before.size() + 1);
+        app.goTo().groupPage();
+        Groups before = app.group().all();
+        GroupData group = new GroupData().withName("Test3");
+        app.group().create(group);
+        Groups after = app.group().all();
 
-        group.setId(after.stream().max((Comparator.comparingInt(GroupData::getId))).get().getId());
-        before.add(group);
-        Assert.assertEquals(new HashSet<Object>(before),new HashSet<Object>(after));
-
+        assertThat(after.size(),equalTo(before.size() + 1));
+        assertThat(after, equalTo(before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
     }
 }
