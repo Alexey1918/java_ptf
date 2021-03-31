@@ -28,8 +28,8 @@ public class ContactPhoneTests extends TestBase {
       app.contact().create(new ContactData()
               .withFirstName("First name")
               .withLastName("Last name")
-              .withPhone_number("+375290000000")
-              .withEmail("dummyemail@gmail.com")
+              .withPhone_number("+892616601234")
+              .withEmail("alexvin@gmail.com")
               .withGroup_name("test1"));
     }
 
