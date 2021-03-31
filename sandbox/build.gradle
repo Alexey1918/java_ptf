@@ -1,13 +1,15 @@
-apply plugin : 'java'
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = "ru.stqa.pft.sandbox.MyFirstProgram"
 
-apply plugin : 'application'
-
-mainClassName = "MyFirst"
-
-repositories{
+repositories {
     mavenCentral()
 }
 
-dependencies{
-    compile 'org.testng:testng:6.9.10'
+dependencies {
+    implementation 'org.testng:testng:7.3.0'
 }
+
+
+/*
+https://docs.gradle.org/current/userguide/building_java_projects.html*/
