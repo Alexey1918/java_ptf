@@ -58,7 +58,7 @@ public class ContactModificationTests extends TestBase {
 
     app.contact().modify(contact);
     app.goTo().HomePageInHeader();
-    assertThat(app.contact().count(), equalTo(before.size() ));
+    assertThat(app.contact().count(), equalTo(before.size() ));//хеш
     Contacts after = app.contact().all(); // список контактов после изменения контакта
     assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
 

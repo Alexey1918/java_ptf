@@ -1,5 +1,7 @@
 package ru.stqa.pft.addressbook.model;
 
+import java.io.File;
+
 public class ContactData {
   private int id = Integer.MAX_VALUE;
   private  String firstName;
@@ -17,10 +19,21 @@ public class ContactData {
   private String email3;
   private String editAddress;
   private String mainAddress;
+  private File photo;
+
+  public File getPhoto() {
+    return photo;
+  }
+
+  public ContactData withPhoto(File photo) {
+    this.photo = photo;
+    return this;
+  }
 
   public String getMainAddress() {
     return mainAddress;
   }
+
   public ContactData withMainAddress(String mainAddress) {
     this.mainAddress = mainAddress;
     return this;
@@ -30,6 +43,7 @@ public class ContactData {
   public String getEditAddress() {
     return editAddress;
   }
+
   public ContactData withEditAddress(String editAddress) {
     this.editAddress = editAddress;
     return this;
@@ -38,6 +52,7 @@ public class ContactData {
   public String getEmail1() {
     return email1;
   }
+
   public ContactData withEmail1(String email1) {
     this.email1 = email1;
     return this;
@@ -46,6 +61,7 @@ public class ContactData {
   public String getEmail2() {
     return email2;
   }
+
   public ContactData withEmail2(String email2) {
     this.email2 = email2;
     return this;
@@ -54,6 +70,7 @@ public class ContactData {
   public String getEmail3() {
     return email3;
   }
+
   public ContactData withEmail3(String email3) {
     this.email3 = email3;
     return this;
@@ -62,6 +79,7 @@ public class ContactData {
   public String getAllEmails() {
     return allEmails;
   }
+
   public ContactData withAllEmails(String allEmails) {
     this.allEmails = allEmails;
     return this;
@@ -70,6 +88,7 @@ public class ContactData {
   public String getAllPhones() {
     return allPhones;
   }
+
   public ContactData withAllPhones(String allPhones) {
     this.allPhones = allPhones;
     return this;
@@ -78,6 +97,7 @@ public class ContactData {
   public String getHomePhone() {
     return homePhone;
   }
+
   public ContactData withHomePhone(String homePhone) {
     this.homePhone = homePhone;
     return this;
@@ -86,6 +106,7 @@ public class ContactData {
   public String getMobilePhone() {
     return mobilePhone;
   }
+
   public ContactData withMobilePhone(String mobilePhone) {
     this.mobilePhone = mobilePhone;
     return this;
@@ -94,6 +115,7 @@ public class ContactData {
   public String getWorkPhone() {
     return workPhone;
   }
+
   public ContactData withWorkPhone(String workPhone) {
     this.workPhone = workPhone;
     return this;
@@ -102,6 +124,7 @@ public class ContactData {
   public int getId() {
     return id;
   }
+
   public ContactData withId(int id) {
     this.id = id;
     return this;
@@ -110,6 +133,7 @@ public class ContactData {
   public String getFirstName() {
     return firstName;
   }
+
   public ContactData withFirstName(String first_name) {
     this.firstName = first_name;
     return this;
@@ -118,6 +142,7 @@ public class ContactData {
   public String getLastName() {
     return lastName;
   }
+
   public ContactData withLastName(String last_name) {
     this.lastName = last_name;
     return this;
@@ -126,6 +151,7 @@ public class ContactData {
   public String getPhoneNumber() {
     return phoneNumber;
   }
+
   public ContactData withPhone_number(String phone_number) {
     this.phoneNumber = phone_number;
     return this;
@@ -134,6 +160,7 @@ public class ContactData {
   public String getEmail() {
     return email;
   }
+
   public ContactData withEmail(String email) {
     this.email = email;
     return this;
@@ -142,6 +169,7 @@ public class ContactData {
   public String getGroupName() {
     return groupName;
  }
+
   public ContactData withGroup_name(String group_name) {
     this.groupName = group_name;
     return this;

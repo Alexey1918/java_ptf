@@ -17,8 +17,7 @@ public class ContactDeletionTests extends TestBase {
 
   public void ensurePreconditions() {
 
-    /*added a check for a group to be created in application before contact modification
-    because contact is waiting for at least 1 group to be present in app*/
+
 
     app.goTo().GroupPage();
     if (app.group().all().size() == 0) {
@@ -45,17 +44,14 @@ public class ContactDeletionTests extends TestBase {
 
 
     app.goTo().HomePageInHeader();
-    Contacts before = app.contact().all(); // список контактов до удаления  контакта
+    Contacts before = app.contact().all();
     ContactData deletedContact = before.iterator().next(); // обращаемся к множеству через итератор и используем метод next чтобы вернуть первый попавшийся элемент множества
     app.contact().delete(deletedContact);
     app.goTo().HomePageInHeader();
-    assertThat(app.contact().count(), equalTo(before.size() - 1));
-    Contacts after = app.contact().all(); // список контактов после удаления  контакта
+    assertThat(app.contact().count(), equalTo(before.size() - 1));//забираем из хеша данные чтобы не создавать список заново
+    Contacts after = app.contact().all();
     assertThat(after, equalTo(before.without(deletedContact)));
 
-
-
   }
-
 
 }
