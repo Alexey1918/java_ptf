@@ -18,9 +18,6 @@ public class ContactModificationTests extends TestBase {
 
   public void ensurePreconditions() {
 
-    /*added a check for a group to be created in application before contact modification
-    because contact is waiting for at least 1 group to be present in app*/
-
     app.goTo().GroupPage();
     if (app.group().all().size() == 0) {
       app.group().create(new GroupData().withName("test1"));

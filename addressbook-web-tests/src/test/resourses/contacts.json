@@ -1,0 +1,34 @@
+[
+  {
+    "firstName": "FirstNameTest0",
+    "lastName": "LastNameTest0",
+    "phoneNumber": "375290000000",
+    "email": "test_email@test0",
+    "groupName": "test0",
+    "photo": "src\\test\\resources\\stru.png"
+  },
+  {
+    "firstName": "FirstNameTest1",
+    "lastName": "LastNameTest1",
+    "phoneNumber": "375290000001",
+    "email": "test_email@test1",
+    "groupName": "test1",
+    "photo": "src\\test\\resources\\stru.png"
+  },
+  {
+    "firstName": "FirstNameTest2",
+    "lastName": "LastNameTest2",
+    "phoneNumber": "375290000002",
+    "email": "test_email@test2",
+    "groupName": "test2",
+    "photo": "src\\test\\resources\\stru.png"
+  },
+  {
+    "firstName": "FirstNameTest3",
+    "lastName": "LastNameTest3",
+    "phoneNumber": "375290000003",
+    "email": "test_email@test3",
+    "groupName": "test3",
+    "photo": "src\\test\\resources\\stru.png"
+  }
+]
