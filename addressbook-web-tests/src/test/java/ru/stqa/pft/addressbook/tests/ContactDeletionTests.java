@@ -17,8 +17,6 @@ public class ContactDeletionTests extends TestBase {
 
   public void ensurePreconditions() {
 
-
-
     app.goTo().GroupPage();
     if (app.group().all().size() == 0) {
       app.group().create(new GroupData().withName("test1"));

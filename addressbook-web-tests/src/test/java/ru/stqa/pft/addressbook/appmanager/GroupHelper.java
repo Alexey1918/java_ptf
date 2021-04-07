@@ -6,14 +6,17 @@ import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Properties;
 
 public class GroupHelper extends HelperBase {
 
-  public GroupHelper(WebDriver wd) {
+  private  final Properties properties;
+
+
+  public GroupHelper(WebDriver wd, Properties properties) {
     super(wd);
+    this.properties = properties;
   }
 
   public void initGroupCreation() {
@@ -21,9 +24,9 @@ public class GroupHelper extends HelperBase {
   }
 
   public void fillGroupForm(GroupData groupData) {
-    type(By.name("group_name"), groupData.getName());
-    type(By.name("group_header"), groupData.getHeader());
-    type(By.name("group_footer"), groupData.getFooter());
+    type(By.name(properties.getProperty("web.groupName")), groupData.getName());
+    type(By.name(properties.getProperty("web.groupHeader")), groupData.getHeader());
+    type(By.name(properties.getProperty("web.groupFooter")), groupData.getFooter());
   }
 
   public void submitGroupCreationForm() {

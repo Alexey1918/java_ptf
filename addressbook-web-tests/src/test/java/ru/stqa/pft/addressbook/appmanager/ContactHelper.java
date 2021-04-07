@@ -52,26 +52,12 @@ public class ContactHelper extends HelperBase {
     }
   }
 
-
-
   public void submitContactForm() {
     click(By.xpath("(//input[@name='submit'])[2]"));
   }
 
-  public void initContactModification() {
-    wd.findElement(By.xpath("//img[@alt='Edit']")).click();
-  }
-
-  public void deleteContactInEditMode() {
-    click(By.xpath("(//input[@name='update'])[3]"));
-  }
-
   public void submitContactModification() {
     click(By.xpath("(//input[@name='update'])[2]"));
-  }
-
-  public void selectContactCheckbox(int index) {
-    wd.findElements(By.name("selected[]")).get(index).click();
   }
 
   public void selectContactCheckboxById(int id) {
