@@ -93,9 +93,9 @@ public class ContactDataGenerator {
         List<ContactData> contacts = new ArrayList<ContactData>();
         for (int i = 0; i < count; i++) {
             contacts.add(new ContactData()
-                    .withFirstName(String.format("FirstNameTest%s", i))
-                    .withLastName(String.format("LastNameTest%s", i))
-                    .withPhone_number(String.format("37529000000%s", i))
+                    .withFirstName(String.format("FiNameTest%s", i))
+                    .withLastName(String.format("LatNaeTest%s", i))
+                    .withPhone_number(String.format("3752900%s", i))
                     .withEmail(String.format("test_email@test%s", i))
                     .withGroup_name(String.format("test%s", i))
                     .withPhoto(new File(String.format("src/test/resourses/stru.png")))

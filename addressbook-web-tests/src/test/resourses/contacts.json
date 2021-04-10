@@ -1,16 +1,16 @@
 [
   {
-    "firstName": "FirstNameTest0",
-    "lastName": "LastNameTest0",
-    "phoneNumber": "375290000000",
+    "firstName": "FiNameTest0",
+    "lastName": "LatNaeTest0",
+    "phoneNumber": "37529000",
     "email": "test_email@test0",
     "groupName": "test0",
     "photo": "src\\test\\resourses\\stru.png"
   },
   {
-    "firstName": "FirstNameTest1",
-    "lastName": "LastNameTest1",
-    "phoneNumber": "375290000001",
+    "firstName": "FiNameTest1",
+    "lastName": "LatNaeTest1",
+    "phoneNumber": "37529001",
     "email": "test_email@test1",
     "groupName": "test1",
     "photo": "src\\test\\resourses\\stru.png"
