@@ -12,6 +12,8 @@ dependencies {
     implementation 'com.beust:jcommander:1.48'
     implementation 'com.thoughtworks.xstream:xstream:1.4.16'
     implementation 'org.immutables:gson:2.8.9-ea-1'
+    implementation 'mysql:mysql-connector-java:5.1.38'
+    implementation 'org.hibernate:hibernate-core:5.4.30.Final'
 }
 
 task testGroups(type:Test){
