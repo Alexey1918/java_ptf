@@ -45,6 +45,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\test\java\ru\stqa\pft\addressbook\model\ContactData.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\test\java\ru\stqa\pft\addressbook\model\GroupData.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\test\java\ru\stqa\pft\addressbook\tests\ContactCreationTests.java">
           <value>
             <Attribute>
