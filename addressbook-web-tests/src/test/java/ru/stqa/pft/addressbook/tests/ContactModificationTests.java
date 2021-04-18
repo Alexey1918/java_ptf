@@ -18,24 +18,21 @@ public class ContactModificationTests extends TestBase {
 
   public void ensurePreconditions() {
 
-    app.goTo().GroupPage();
-    if (app.group().all().size() == 0) {
-      app.group().create(new GroupData().withName("test1"));
 
+    if (app.db().groups().size() == 0) {
+      app.goTo().GroupPage();
+      app.group().create(new GroupData().withName("test1"));
     }
 
     app.goTo().HomePageInHeader();
 
-    if (app.contact().all().size() == 0) {
+    if (app.db().contacts().size() == 0) {
       app.contact().create(new ContactData()
-              .withFirstName("First name")
-              .withLastName("Last name")
-              .withPhone_number("+89265677676")
-              .withEmail("zaizevvanya@gmail.com")
-              .withGroup_name("test1"));
+              .withFirst_name("First name")
+              .withLast_name("Last name")
+              .withMobilePhone("+375290000000")
+              .withEmail("dummyemail@gmail.com"));
     }
-
-
   }
 
   @Test (enabled = true)
@@ -44,24 +41,24 @@ public class ContactModificationTests extends TestBase {
 
     app.goTo().HomePageInHeader();
 
-    Contacts before = app.contact().all(); // список контактов до изменения контакта
+
+    Contacts before = app.db().contacts(); // список контактов из базы данных
     ContactData modifiedContact = before.iterator().next(); // обращаемся к множеству через итератор и используем метод next чтобы вернуть первый попавшийся элемент множества
     ContactData contact = new ContactData()
             .withId(modifiedContact.getId())
-            .withFirstName("Updated name")
-            .withLastName("UpdatedLast name")
-            .withPhone_number("+89160000000")
-            .withEmail("tyudregmail.com");
+            .withFirst_name("Updated name")
+            .withLast_name("UpdatedLast name")
+            .withMobilePhone("+375290000000")
+            .withEmail("dummyemail@gmail.com");
 
     app.contact().modify(contact);
     app.goTo().HomePageInHeader();
-    assertThat(app.contact().count(), equalTo(before.size() ));//хеш
-    Contacts after = app.contact().all(); // список контактов после изменения контакта
+    assertThat(app.contact().count(), equalTo(before.size() ));
+    Contacts after = app.db().contacts(); // список контактов из базы данных
     assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
 
+    verifyContactListInUI();
 
   }
-
-
 
 }

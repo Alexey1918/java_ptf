@@ -17,20 +17,17 @@ public class ContactPhoneTests extends TestBase {
 
   public void ensurePreconditions() {
 
-    app.goTo().GroupPage();
-    if (app.group().all().size() == 0) {
+    if (app.db().groups().size() == 0) {
+      app.goTo().GroupPage();
       app.group().create(new GroupData().withName("test1"));
-
     }
 
-    app.goTo().HomePageInHeader();
-    if (app.contact().all().size() == 0) {
+    if (app.db().contacts().size() == 0) {
       app.contact().create(new ContactData()
-              .withFirstName("First name")
-              .withLastName("Last name")
-              .withPhone_number("+892616601234")
-              .withEmail("alexvin@gmail.com")
-              .withGroup_name("test1"));
+              .withFirst_name("First name")
+              .withLast_name("Last name")
+              .withMobilePhone("+375290000000")
+              .withEmail("dummyemail@gmail.com"));
     }
 
   }
@@ -45,6 +42,7 @@ public class ContactPhoneTests extends TestBase {
     assertThat(contact.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));
     assertThat(contact.getAllEmails(), equalTo(mergeEmails(contactInfoFromEditForm)));
     assertThat(contact.getMainAddress(), equalTo(mergeAddress(contactInfoFromEditForm)));
+    verifyContactListInUI();
   }
 
   private String mergePhones(ContactData contact) {
@@ -55,7 +53,7 @@ public class ContactPhoneTests extends TestBase {
   }
 
   private String mergeEmails(ContactData contact) {
-    return Arrays.asList(contact.getEmail1(),contact.getEmail2(), contact.getEmail3())
+    return Arrays.asList(contact.getEmail(),contact.getEmail2(), contact.getEmail3())
             .stream().filter(s -> ! s.equals(""))
             .map(ContactPhoneTests::cleaned)
             .collect(Collectors.joining("\n"));
@@ -64,11 +62,11 @@ public class ContactPhoneTests extends TestBase {
   private String mergeAddress(ContactData contact) {
     return Arrays.asList(contact.getEditAddress())
             .stream().filter(s -> ! s.equals(""))
-            //.map(ContactPhoneTests::cleaned)
             .collect(Collectors.joining("\n"));
   }
-  public static String cleaned(String phone) {
 
+
+  public static String cleaned(String phone) {
     return phone.replaceAll("\\s", "").replaceAll("[-()]", "");
   }
 

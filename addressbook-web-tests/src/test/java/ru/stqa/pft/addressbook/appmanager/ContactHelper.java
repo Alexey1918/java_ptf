@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
+
 import java.util.List;
 
 
@@ -18,6 +20,15 @@ public class ContactHelper extends HelperBase {
 
   public void initNewContactCreation() {
     click(By.linkText("add new"));
+  }
+
+  public void create(ContactData contact) {
+    initNewContactCreation();
+    fillContactForm(contact, true);
+    submitContactForm();
+    contactCache = null;
+    goToHomePageInConfirmation();
+
   }
 
   public void modify(ContactData contact) {
@@ -36,17 +47,56 @@ public class ContactHelper extends HelperBase {
     contactCache = null;
   }
 
+  public void addContactToGroup(ContactData contactData, GroupData groupData) {
 
+    selectContactCheckboxById(contactData.getId());
+    selectGroupFromListToAdd(groupData.getId());
+    addToGroupButton();
+    goToGroupPageAfterAddingRemovingContact();
+    contactCache = null;
+
+  }
+
+  public void addToGroupButton() {
+    wd.findElement(By.name("add")).click();
+  }
+
+  public void removeContactFromGroup (ContactData contact, GroupData groupData) {
+    selectContactCheckboxById(contact.getId());
+    removeFromGroupButton();
+    goToGroupPageAfterAddingRemovingContact();
+    contactCache = null;
+  }
+
+  public void removeFromGroupButton() {
+    wd.findElement(By.name("remove")).click();
+  }
+
+  public void goToGroupPageAfterAddingRemovingContact() {
+    wd.findElement(By.partialLinkText("group page")).click();
+    //wd.findElement(By.cssSelector(String.format("a[href='./?group=%s']", id))).click();
+  }
+
+  public void selectGroupFromList (int groupId) {
+    new Select(wd.findElement(By.name("group"))).selectByValue(String.valueOf(groupId));
+  }
+
+  public void selectGroupFromListToAdd (int groupId) {
+    new Select(wd.findElement(By.name("to_group"))).selectByValue(String.valueOf(groupId));
+  }
 
   public void fillContactForm(ContactData contactData, boolean creation) {
-    type(By.name("firstname"), contactData.getFirstName());
-    type(By.name("lastname"), contactData.getLastName());
-    type(By.name("mobile"), contactData.getPhoneNumber());
+    type(By.name("firstname"), contactData.getFirst_name());
+    type(By.name("lastname"), contactData.getLast_name());
+    type(By.name("mobile"), contactData.getMobilePhone());
     type(By.name("email"), contactData.getEmail());
-    //attach(By.name("photo"), contactData.getPhoto());
+    attach(By.name("photo"), contactData.getPhoto());
 
     if (creation) {
-      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroupName());
+      if (contactData.getGroups().size() > 0) {
+        Assert.assertTrue(contactData.getGroups().size() == 1);
+      }
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
@@ -56,8 +106,20 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("(//input[@name='submit'])[2]"));
   }
 
+  public void initContactModification() {
+    wd.findElement(By.xpath("//img[@alt='Edit']")).click();
+  }
+
+  public void deleteContactInEditMode() {
+    click(By.xpath("(//input[@name='update'])[3]"));
+  }
+
   public void submitContactModification() {
     click(By.xpath("(//input[@name='update'])[2]"));
+  }
+
+  public void selectContactCheckbox(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
   }
 
   public void selectContactCheckboxById(int id) {
@@ -69,22 +131,15 @@ public class ContactHelper extends HelperBase {
 
   }
 
-  public void create(ContactData contact) {
-    initNewContactCreation();
-    fillContactForm(contact, true);
-    submitContactForm();
-    contactCache = null;
-    goToHomePageInConfirmation();
-
-  }
-
   public void goToHomePageInConfirmation() {
+
+    //wd.findElement(By.linkText("home page")).click();
 
     click(By.linkText("home page"));
   }
 
   public boolean isContactPresent() {
-
+    //return isElementPresent(By.xpath("(//input[@name='selected[]'])"));
     return isElementPresent(By.name("selected[]"));
   }
 
@@ -103,23 +158,23 @@ public class ContactHelper extends HelperBase {
     }
 
     contactCache = new Contacts();
-    List<WebElement> elements = wd.findElements(By.xpath(".//*[@id='maintable']/tbody/tr")); // находим все ряды таблицы
-    elements.remove(0); // удаляем заголовок таблицы, то есть первый ряд, он же первый элемент списка
+    List<WebElement> elements = wd.findElements(By.xpath(".//*[@id='maintable']/tbody/tr")); // search for all table rows
+    elements.remove(0); // remove table header, 1 row at the same time
 
     for (WebElement element: elements) {
 
-      List<WebElement> cells = element.findElements(By.tagName("td")); // создаем второй список из элементов (клеток) строки таблицы
+      List<WebElement> cells = element.findElements(By.tagName("td")); // creating second list of cells (td elements) of current table
       Integer id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      String firstName = cells.get(2).getText();
-      String lastName = cells.get(1).getText();
+      String first_name = cells.get(2).getText();
+      String last_name = cells.get(1).getText();
       String allPhones = cells.get(5).getText();
       String allEmails = cells.get(4).getText();
       String mainAddress = cells.get(3).getText();
 
       contactCache.add(new ContactData()
               .withId(id)
-              .withFirstName(firstName)
-              .withLastName(lastName)
+              .withFirst_name(first_name)
+              .withLast_name(last_name)
               .withAllPhones(allPhones)
               .withAllEmails(allEmails)
               .withMainAddress(mainAddress));
@@ -145,12 +200,12 @@ public class ContactHelper extends HelperBase {
     wd.navigate().back();
     return new ContactData()
             .withId(contact.getId())
-            .withFirstName(firstname)
-            .withLastName(lastname)
+            .withFirst_name(firstname)
+            .withLast_name(lastname)
             .withHomePhone(home)
             .withMobilePhone(mobile)
             .withWorkPhone(work)
-            .withEmail1(email1)
+            .withEmail(email1)
             .withEmail2(email2)
             .withEmail3(email3)
             .withEditAddress(editAddress);
@@ -160,6 +215,7 @@ public class ContactHelper extends HelperBase {
   private void initContactModificationById(int id) {
     wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
   }
+
 
 
 }
