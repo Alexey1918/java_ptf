@@ -12,5 +12,6 @@ public class GeoIpServiceTests {
     public void testMyIp(){
         String ipLocation = new GeoIPService().getGeoIPServiceSoap12().getIpLocation("192.168.5.242");
         System.out.println(ipLocation);
+        assertEquals(ipLocation, "<GeoIP><Country>US</Country><State>CA</State></GeoIP>");
     }
 }
