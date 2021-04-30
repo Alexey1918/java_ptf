@@ -52,6 +52,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\rest-sample\src\test\java\ru\stqa\ptf\rest\ApplicationManager.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\rest-sample\src\test\java\ru\stqa\ptf\rest\Issue.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\rest-sample\src\test\java\ru\stqa\ptf\rest\RestHelper.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\rest-sample\src\test\java\ru\stqa\ptf\rest\RestTests.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\rest-sample\src\test\java\ru\stqa\ptf\rest\TestBase.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\soap-sample\build.gradle">
           <value>
             <Attribute>

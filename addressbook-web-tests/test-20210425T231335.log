@@ -160,63 +160,63 @@
 5721 [main] DEBUG o.h.e.j.e.s.IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
 5829 [main] DEBUG o.h.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
 5837 [main] DEBUG o.h.t.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@50eca7c6] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@58e6d4b8]
-5992 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ru.stqa.pft.addressbook.model.GroupData
+5992 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: GroupData
 6059 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
 6077 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name GroupData
-6085 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity ru.stqa.pft.addressbook.model.GroupData on table group_list
+6085 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity GroupData on table group_list
 6141 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_id, insertable=true, updatable=true, unique=false}
-6149 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.stqa.pft.addressbook.model.GroupData] is safe
-6149 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.stqa.pft.addressbook.model.GroupData
+6149 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [GroupData] is safe
+6149 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : GroupData
 6151 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
-6154 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.GroupData:id]
+6154 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [GroupData:id]
 6159 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
 6163 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
 6174 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(group_id)]), id, assigned, , ...)
 6175 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_footer, insertable=true, updatable=true, unique=false}
 6175 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property footer with lazy=false
-6175 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.GroupData:footer]
+6175 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [GroupData:footer]
 6176 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for footer
 6176 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property footer
 6180 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_header, insertable=true, updatable=true, unique=false}
 6180 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property header with lazy=false
-6180 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.GroupData:header]
+6180 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [GroupData:header]
 6181 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for header
 6181 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property header
 6181 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(group_list), mappingColumn=group_name, insertable=true, updatable=true, unique=false}
 6181 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property name with lazy=false
-6181 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.GroupData:name]
+6181 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [GroupData:name]
 6182 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for name
 6182 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property name
-6187 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ru.stqa.pft.addressbook.model.ContactData
+6187 [main] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ContactData
 6188 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
 6188 [main] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name ContactData
-6188 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity ru.stqa.pft.addressbook.model.ContactData on table addressbook
+6188 [main] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity ContactData on table addressbook
 6258 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=id, insertable=true, updatable=true, unique=false}
-6259 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.stqa.pft.addressbook.model.ContactData] is safe
-6259 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.stqa.pft.addressbook.model.ContactData
+6259 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ContactData] is safe
+6259 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ContactData
 6259 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
-6259 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:id]
+6259 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:id]
 6259 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
 6259 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
 6262 [main] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, assigned, , ...)
 6263 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=email, insertable=true, updatable=true, unique=false}
 6264 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email with lazy=false
-6264 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:email]
+6264 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:email]
 6266 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for email
 6266 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property email
 6267 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=email2, insertable=true, updatable=true, unique=false}
 6268 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email2 with lazy=false
-6268 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:email2]
+6268 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:email2]
 6268 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for email2
 6268 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property email2
 6269 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=email3, insertable=true, updatable=true, unique=false}
 6269 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property email3 with lazy=false
-6270 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:email3]
+6270 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:email3]
 6270 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for email3
 6271 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property email3
 6271 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=firstname, insertable=true, updatable=true, unique=false}
 6271 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property first_name with lazy=false
-6271 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:first_name]
+6271 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:first_name]
 6272 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for first_name
 6273 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property first_name
 6279 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=null, insertable=true, updatable=true, unique=false}
@@ -225,36 +225,36 @@
 6326 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='groups_KEY', referencedColumn='null', mappedBy='null'}
 6329 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='id', referencedColumn='', mappedBy=''}
 6329 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='group_id', referencedColumn='', mappedBy=''}
-6331 [main] DEBUG o.h.c.annotations.CollectionBinder - Collection role: ru.stqa.pft.addressbook.model.ContactData.groups
+6331 [main] DEBUG o.h.c.annotations.CollectionBinder - Collection role: ContactData.groups
 6342 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property groups
 6345 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=home, insertable=true, updatable=true, unique=false}
 6352 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property homePhone with lazy=false
-6352 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:homePhone]
+6352 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:homePhone]
 6352 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for homePhone
 6353 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property homePhone
 6355 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=lastname, insertable=true, updatable=true, unique=false}
 6356 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property last_name with lazy=false
-6356 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:last_name]
+6356 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:last_name]
 6356 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for last_name
 6358 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property last_name
 6359 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=address, insertable=true, updatable=true, unique=false}
 6360 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property mainAddress with lazy=false
-6360 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:mainAddress]
+6360 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:mainAddress]
 6361 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for mainAddress
 6361 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property mainAddress
 6361 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=mobile, insertable=true, updatable=true, unique=false}
 6362 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property mobilePhone with lazy=false
-6362 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:mobilePhone]
+6362 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:mobilePhone]
 6362 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for mobilePhone
 6362 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property mobilePhone
 6363 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=photo, insertable=true, updatable=true, unique=false}
 6364 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property photo with lazy=false
-6364 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:photo]
+6364 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:photo]
 6365 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for photo
 6366 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property photo
 6367 [main] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(addressbook), mappingColumn=work, insertable=true, updatable=true, unique=false}
 6368 [main] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property workPhone with lazy=false
-6377 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ru.stqa.pft.addressbook.model.ContactData:workPhone]
+6377 [main] DEBUG o.h.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [ContactData:workPhone]
 6377 [main] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for workPhone
 6377 [main] DEBUG o.h.cfg.annotations.PropertyBinder - Building property workPhone
 6380 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for id
@@ -274,15 +274,15 @@
 6405 [main] DEBUG o.h.c.annotations.SimpleValueBinder - Starting fillSimpleValue for workPhone
 6409 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [group_id] to be non-null as it is part of the primary key for table [group_list]
 6409 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [addressbook]
-6409 [main] DEBUG o.h.cfg.CollectionSecondPass - Second pass for collection: ru.stqa.pft.addressbook.model.ContactData.groups
-6410 [main] DEBUG o.h.c.annotations.CollectionBinder - Binding as ManyToMany: ru.stqa.pft.addressbook.model.ContactData.groups
+6409 [main] DEBUG o.h.cfg.CollectionSecondPass - Second pass for collection: ContactData.groups
+6410 [main] DEBUG o.h.c.annotations.CollectionBinder - Binding as ManyToMany: ContactData.groups
 6439 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [address_in_groups]
 6440 [main] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [group_id] to be non-null as it is part of the primary key for table [address_in_groups]
 6441 [main] DEBUG o.h.cfg.CollectionSecondPass - Mapped collection key: id, element: group_id
-6441 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: ru.stqa.pft.addressbook.model.GroupData
-6448 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: ru.stqa.pft.addressbook.model.ContactData
-6452 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: ru.stqa.pft.addressbook.model.GroupData
-6453 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: ru.stqa.pft.addressbook.model.ContactData
+6441 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: GroupData
+6448 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: ContactData
+6452 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: GroupData
+6453 [main] DEBUG o.h.b.i.InFlightMetadataCollectorImpl - Resolving reference to class: ContactData
 6593 [main] DEBUG o.h.internal.SessionFactoryImpl - Building session factory
 6596 [main] DEBUG org.hibernate.cfg.Settings - SessionFactory name : null
 6596 [main] DEBUG org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): enabled
@@ -328,16 +328,16 @@
 6924 [main] DEBUG o.h.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
 6931 [main] DEBUG o.h.internal.SessionFactoryImpl - Instantiated session factory
 6932 [main] DEBUG o.h.t.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@50eca7c6] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@8dfe921]
-7143 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.stqa.pft.addressbook.model.ContactData] is safe
-7144 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.stqa.pft.addressbook.model.ContactData
-7880 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ru.stqa.pft.addressbook.model.GroupData] is safe
-7880 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.stqa.pft.addressbook.model.GroupData
-7943 [main] DEBUG o.h.p.c.AbstractCollectionPersister - Static SQL for collection: ru.stqa.pft.addressbook.model.ContactData.groups
+7143 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [ContactData] is safe
+7144 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ContactData
+7880 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - Not known whether passed class name [GroupData] is safe
+7880 [main] DEBUG o.h.b.i.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : GroupData
+7943 [main] DEBUG o.h.p.c.AbstractCollectionPersister - Static SQL for collection: ContactData.groups
 7943 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row insert: insert into address_in_groups (id, group_id) values (?, ?)
 7943 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row update: update address_in_groups set group_id=? where id=? and group_id=?
 7943 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  Row delete: delete from address_in_groups where id=? and group_id=?
 7943 [main] DEBUG o.h.p.c.AbstractCollectionPersister -  One-shot delete: delete from address_in_groups where id=?
-7952 [main] DEBUG o.h.p.e.AbstractEntityPersister - Static SQL for entity: ru.stqa.pft.addressbook.model.ContactData
+7952 [main] DEBUG o.h.p.e.AbstractEntityPersister - Static SQL for entity: ContactData
 7952 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Version select: select id from addressbook where id =?
 7952 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Snapshot select: select contactdat_.id, contactdat_.email as email2_1_, contactdat_.email2 as email3_1_, contactdat_.email3 as email4_1_, contactdat_.firstname as firstnam5_1_, contactdat_.home as home6_1_, contactdat_.lastname as lastname7_1_, contactdat_.address as address8_1_, contactdat_.mobile as mobile9_1_, contactdat_.photo as photo10_1_, contactdat_.work as work11_1_ from addressbook contactdat_ where contactdat_.id=?
 7952 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Insert 0: insert into addressbook (email, email2, email3, firstname, home, lastname, address, mobile, photo, work, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -362,31 +362,31 @@
 8058 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : workPhone
 8058 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
 8089 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-8105 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.stqa.pft.addressbook.model.ContactData)
+8105 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=ContactData)
     - Returns
-       - EntityReturnImpl(entity=ru.stqa.pft.addressbook.model.ContactData, querySpaceUid=<gen:0>, path=ru.stqa.pft.addressbook.model.ContactData)
-          - CollectionAttributeFetchImpl(collection=ru.stqa.pft.addressbook.model.ContactData.groups, querySpaceUid=<gen:1>, path=ru.stqa.pft.addressbook.model.ContactData.groups)
-             - (collection element) CollectionFetchableElementEntityGraph(entity=ru.stqa.pft.addressbook.model.GroupData, querySpaceUid=<gen:2>, path=ru.stqa.pft.addressbook.model.ContactData.groups.<elements>)
+       - EntityReturnImpl(entity=ContactData, querySpaceUid=<gen:0>, path=ContactData)
+          - CollectionAttributeFetchImpl(collection=ContactData.groups, querySpaceUid=<gen:1>, path=ContactData.groups)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=GroupData, querySpaceUid=<gen:2>, path=ContactData.groups.<elements>)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.stqa.pft.addressbook.model.ContactData)
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ContactData)
           - SQL table alias mapping - contactdat0_
           - alias suffix - 0_
           - suffixed key columns - {id1_1_0_}
           - JOIN (JoinDefinedByMetadata(groups)) : <gen:0> -> <gen:1>
-             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=ru.stqa.pft.addressbook.model.ContactData.groups)
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=ContactData.groups)
                 - SQL table alias mapping - groups1_
                 - alias suffix - 1_
                 - suffixed key columns - {id1_0_1_}
                 - entity-element alias suffix - 2_
                 - 2_entity-element suffixed key columns - group_id1_2_2_
                 - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
-                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=ru.stqa.pft.addressbook.model.GroupData)
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=GroupData)
                       - SQL table alias mapping - groupdata2_
                       - alias suffix - 2_
                       - suffixed key columns - {group_id1_2_2_}
 
-8110 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity ru.stqa.pft.addressbook.model.ContactData [NONE]: select contactdat0_.id as id1_1_0_, contactdat0_.email as email2_1_0_, contactdat0_.email2 as email3_1_0_, contactdat0_.email3 as email4_1_0_, contactdat0_.firstname as firstnam5_1_0_, contactdat0_.home as home6_1_0_, contactdat0_.lastname as lastname7_1_0_, contactdat0_.address as address8_1_0_, contactdat0_.mobile as mobile9_1_0_, contactdat0_.photo as photo10_1_0_, contactdat0_.work as work11_1_0_, groups1_.id as id1_0_1_, groupdata2_.group_id as group_id2_0_1_, groupdata2_.group_id as group_id1_2_2_, groupdata2_.group_footer as group_fo2_2_2_, groupdata2_.group_header as group_he3_2_2_, groupdata2_.group_name as group_na4_2_2_ from addressbook contactdat0_ left outer join address_in_groups groups1_ on contactdat0_.id=groups1_.id left outer join group_list groupdata2_ on groups1_.group_id=groupdata2_.group_id where contactdat0_.id=?
-8110 [main] DEBUG o.h.p.e.AbstractEntityPersister - Static SQL for entity: ru.stqa.pft.addressbook.model.GroupData
+8110 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity ContactData [NONE]: select contactdat0_.id as id1_1_0_, contactdat0_.email as email2_1_0_, contactdat0_.email2 as email3_1_0_, contactdat0_.email3 as email4_1_0_, contactdat0_.firstname as firstnam5_1_0_, contactdat0_.home as home6_1_0_, contactdat0_.lastname as lastname7_1_0_, contactdat0_.address as address8_1_0_, contactdat0_.mobile as mobile9_1_0_, contactdat0_.photo as photo10_1_0_, contactdat0_.work as work11_1_0_, groups1_.id as id1_0_1_, groupdata2_.group_id as group_id2_0_1_, groupdata2_.group_id as group_id1_2_2_, groupdata2_.group_footer as group_fo2_2_2_, groupdata2_.group_header as group_he3_2_2_, groupdata2_.group_name as group_na4_2_2_ from addressbook contactdat0_ left outer join address_in_groups groups1_ on contactdat0_.id=groups1_.id left outer join group_list groupdata2_ on groups1_.group_id=groupdata2_.group_id where contactdat0_.id=?
+8110 [main] DEBUG o.h.p.e.AbstractEntityPersister - Static SQL for entity: GroupData
 8110 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Version select: select group_id from group_list where group_id =?
 8110 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Snapshot select: select groupdata_.group_id, groupdata_.group_footer as group_fo2_2_, groupdata_.group_header as group_he3_2_, groupdata_.group_name as group_na4_2_ from group_list groupdata_ where groupdata_.group_id=?
 8111 [main] DEBUG o.h.p.e.AbstractEntityPersister -  Insert 0: insert into group_list (group_footer, group_header, group_name, group_id) values (?, ?, ?, ?)
@@ -398,16 +398,16 @@
 8111 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : name
 8111 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
 8112 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-8112 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.stqa.pft.addressbook.model.GroupData)
+8112 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(entity=GroupData)
     - Returns
-       - EntityReturnImpl(entity=ru.stqa.pft.addressbook.model.GroupData, querySpaceUid=<gen:0>, path=ru.stqa.pft.addressbook.model.GroupData)
+       - EntityReturnImpl(entity=GroupData, querySpaceUid=<gen:0>, path=GroupData)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.stqa.pft.addressbook.model.GroupData)
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=GroupData)
           - SQL table alias mapping - groupdata0_
           - alias suffix - 0_
           - suffixed key columns - {group_id1_2_0_}
 
-8112 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity ru.stqa.pft.addressbook.model.GroupData [NONE]: select groupdata0_.group_id as group_id1_2_0_, groupdata0_.group_footer as group_fo2_2_0_, groupdata0_.group_header as group_he3_2_0_, groupdata0_.group_name as group_na4_2_0_ from group_list groupdata0_ where groupdata0_.group_id=?
+8112 [main] DEBUG o.h.loader.entity.plan.EntityLoader - Static select for entity GroupData [NONE]: select groupdata0_.group_id as group_id1_2_0_, groupdata0_.group_footer as group_fo2_2_0_, groupdata0_.group_header as group_he3_2_0_, groupdata0_.group_name as group_na4_2_0_ from group_list groupdata0_ where groupdata0_.group_id=?
 8123 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@53c68ce]
 8123 [main] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6f9ad11c]
 8124 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : footer
@@ -415,24 +415,24 @@
 8124 [main] DEBUG o.h.p.w.spi.MetamodelGraphWalker - Visiting attribute path : name
 8124 [main] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
 8129 [main] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-8130 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(collection=ru.stqa.pft.addressbook.model.ContactData.groups)
+8130 [main] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter - LoadPlan(collection=ContactData.groups)
     - Returns
-       - CollectionReturnImpl(collection=ru.stqa.pft.addressbook.model.ContactData.groups, querySpaceUid=<gen:0>, path=[ru.stqa.pft.addressbook.model.ContactData.groups])
-          - (collection element) CollectionFetchableElementEntityGraph(entity=ru.stqa.pft.addressbook.model.GroupData, querySpaceUid=<gen:1>, path=[ru.stqa.pft.addressbook.model.ContactData.groups].<elements>)
+       - CollectionReturnImpl(collection=ContactData.groups, querySpaceUid=<gen:0>, path=[ContactData.groups])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=GroupData, querySpaceUid=<gen:1>, path=[ContactData.groups].<elements>)
     - QuerySpaces
-       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=ru.stqa.pft.addressbook.model.ContactData.groups)
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=ContactData.groups)
           - SQL table alias mapping - groups0_
           - alias suffix - 0_
           - suffixed key columns - {id1_0_0_}
           - entity-element alias suffix - 1_
           - 1_entity-element suffixed key columns - group_id1_2_1_
           - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
-             - EntityQuerySpaceImpl(uid=<gen:1>, entity=ru.stqa.pft.addressbook.model.GroupData)
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=GroupData)
                 - SQL table alias mapping - groupdata1_
                 - alias suffix - 1_
                 - suffixed key columns - {group_id1_2_1_}
 
-8131 [main] DEBUG o.h.l.c.plan.CollectionLoader - Static select for collection ru.stqa.pft.addressbook.model.ContactData.groups: select groups0_.id as id1_0_0_, groups0_.group_id as group_id2_0_0_, groupdata1_.group_id as group_id1_2_1_, groupdata1_.group_footer as group_fo2_2_1_, groupdata1_.group_header as group_he3_2_1_, groupdata1_.group_name as group_na4_2_1_ from address_in_groups groups0_ inner join group_list groupdata1_ on groups0_.group_id=groupdata1_.group_id where groups0_.id=?
+8131 [main] DEBUG o.h.l.c.plan.CollectionLoader - Static select for collection ContactData.groups: select groups0_.id as id1_0_0_, groups0_.group_id as group_id2_0_0_, groupdata1_.group_id as group_id1_2_1_, groupdata1_.group_footer as group_fo2_2_1_, groupdata1_.group_header as group_he3_2_1_, groupdata1_.group_name as group_na4_2_1_ from address_in_groups groups0_ inner join group_list groupdata1_ on groups0_.group_id=groupdata1_.group_id where groups0_.id=?
 8244 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1de9d54] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 8445 [main] DEBUG o.h.e.t.j.p.i.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
 8450 [main] DEBUG o.h.e.t.j.p.i.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
