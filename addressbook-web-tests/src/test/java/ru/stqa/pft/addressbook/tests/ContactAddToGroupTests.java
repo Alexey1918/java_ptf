@@ -18,7 +18,7 @@ public class ContactAddToGroupTests extends TestBase {
     @BeforeMethod
 
     public void ensurePreconditions() {
-        
+
 
         if (app.db().groups().size() == 0) {
             app.goTo().GroupPage();
