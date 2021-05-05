@@ -7,13 +7,14 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.*;
-import ru.stqa.pft.addressbook.model.Contacts;
-import ru.stqa.pft.addressbook.model.Groups;
 import ru.stqa.pft.addressbook.model.ContactData;
+import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
+import ru.stqa.pft.addressbook.model.Groups;
 
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -26,9 +27,6 @@ public class ContactCreationTests extends TestBase {
   @BeforeMethod
 
   public void ensurePreconditions() {
-
-    /*added a check for a group to be created in application before contact creation
- because contact is waiting for at least 1 group*/
 
     app.goTo().GroupPage();
     if (app.db().groups().size() == 0) {

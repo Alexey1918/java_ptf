@@ -11,5 +11,6 @@ dependencies {
 }
 
 
-/*
-https://docs.gradle.org/current/userguide/building_java_projects.html*/
+test {
+    useTestNG()
+}

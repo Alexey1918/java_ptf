@@ -54,8 +54,8 @@ public class ContactAddToGroupTests extends TestBase {
     }
 
     private ContactData selectContactById(ContactData addContact) {
-        Contacts contactsById = app.db().contacts();
-        return contactsById.iterator().next().withId(addContact.getId());
+        Contacts allContacts     = app.db().contacts();
+        return allContacts.iterator().next().withId(addContact.getId());
 
     }
 
