@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\addressbook-web-tests\src\test\java\ru\stqa\pft\addressbook\appmanager\ApplicationManager.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\addressbook-web-tests\src\test\java\ru\stqa\pft\addressbook\tests\ContactAddToGroupTests.java">
           <value>
             <Attribute>
@@ -95,6 +102,13 @@
           </value>
         </entry>
         <entry key="\rest-sample\src\test\java\ru\stqa\ptf\rest\TestBase.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\sandbox\src\test\java\ru\stqa\pft\sandbox\SquareTests.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />

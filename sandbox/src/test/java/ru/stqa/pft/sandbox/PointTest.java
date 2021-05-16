@@ -1,7 +1,9 @@
-package ru.stqa.pft.rest.ptf.addressbook.sandbox;
+package ru.stqa.pft.sandbox;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.awt.*;
 
 public class PointTest {
 
