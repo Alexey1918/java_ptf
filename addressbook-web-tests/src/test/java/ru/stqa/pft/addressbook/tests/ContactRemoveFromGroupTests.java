@@ -7,6 +7,7 @@ import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
 
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -29,6 +30,7 @@ public class ContactRemoveFromGroupTests extends TestBase{
                     .withMobilePhone("+375290000000")
                     .withEmail("dummyemail@gmail.com"));
         }
+
     }
 
 
