@@ -43,30 +43,37 @@ public class ContactAddToGroupTests extends TestBase {
 
         app.goTo().HomePageInHeader();
         ContactData addContact = selectContact();
-        GroupData groupContactToBeAddedTo = selectGroup(addContact);
-        Groups before = addContact.getGroups();
+        GroupData groupContactToBeAddedTo = selectGroup(addContact);//контакт дорбален в группу 2 ранее выбранную
+        Groups before = addContact.getGroups();//получить группу в которую добален контакт
         app.goTo().HomePageInHeader();
         app.contact().addContactToGroup(addContact, groupContactToBeAddedTo);
         app.goTo().HomePageInHeader();
-        ContactData addContactAfter = selectContactById(addContact);
+        ContactData addContactAfter = selectContactById(addContact);//получили контакт по ID из всех контактов
         Groups after = addContactAfter.getGroups();
         assertThat(after, equalTo(before.withAdded(groupContactToBeAddedTo)));
     }
 
     private ContactData selectContactById(ContactData addContact) {
         Contacts allContacts     = app.db().contacts();
-        return allContacts.iterator().next().withId(addContact.getId());
+        int a = addContact.getId();
+        System.out.println("Искомая айди -" + a);
 
+        for (ContactData r : allContacts){
+            if (a == r.getId()) {
+                System.out.println("Контакт с нужной айди - " + r);
+                return r;
+            }
+        }return null;
     }
 
     private GroupData selectGroup(ContactData contact) {
-        Groups allGroups = app.db().groups();
+        Groups allGroups = app.db().groups();//группы перед добавлением
         Groups contactsInGroups = contact.getGroups();
 
         Collection<GroupData> contactGroups = new HashSet<>(contactsInGroups);
         Collection<GroupData> avaliableGroups = new HashSet<>(allGroups);
         avaliableGroups.removeAll(contactGroups);
-        return avaliableGroups.iterator().next();
+        return avaliableGroups.iterator().next();//случайно выбрали вторую группу
     }
 
 

@@ -30,9 +30,7 @@ public class ContactRemoveFromGroupTests extends TestBase{
                     .withMobilePhone("+375290000000")
                     .withEmail("dummyemail@gmail.com"));
         }
-
     }
-
 
     @Test
 
