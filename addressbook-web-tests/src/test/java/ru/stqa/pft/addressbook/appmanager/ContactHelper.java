@@ -74,7 +74,6 @@ public class ContactHelper extends HelperBase {
 
   public void goToGroupPageAfterAddingRemovingContact() {
     wd.findElement(By.partialLinkText("group page")).click();
-    //wd.findElement(By.cssSelector(String.format("a[href='./?group=%s']", id))).click();
   }
 
   public void selectGroupFromList (int groupId) {

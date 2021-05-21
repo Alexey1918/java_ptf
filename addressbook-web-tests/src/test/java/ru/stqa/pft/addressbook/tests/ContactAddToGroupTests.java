@@ -42,14 +42,16 @@ public class ContactAddToGroupTests extends TestBase {
     public void testContactAddToGroup() {
 
         app.goTo().HomePageInHeader();
-        ContactData addContact = selectContact();
+        ContactData addContact = selectContact();//выбрали контакт
         GroupData groupContactToBeAddedTo = selectGroup(addContact);//контакт дорбален в группу 2 ранее выбранную
         Groups before = addContact.getGroups();//получить группу в которую добален контакт
+        System.out.println("Группы перед - " + before);
         app.goTo().HomePageInHeader();
         app.contact().addContactToGroup(addContact, groupContactToBeAddedTo);
         app.goTo().HomePageInHeader();
         ContactData addContactAfter = selectContactById(addContact);//получили контакт по ID из всех контактов
         Groups after = addContactAfter.getGroups();
+        System.out.println("Группы после - " + after);
         assertThat(after, equalTo(before.withAdded(groupContactToBeAddedTo)));
     }
 
@@ -57,6 +59,8 @@ public class ContactAddToGroupTests extends TestBase {
         Contacts allContacts     = app.db().contacts();
         int a = addContact.getId();
         System.out.println("Искомая айди -" + a);
+
+        //allContacts.stream().filter(c ->c.getId() == a);
 
         for (ContactData r : allContacts){
             if (a == r.getId()) {

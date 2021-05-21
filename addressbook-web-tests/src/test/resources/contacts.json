@@ -19,5 +19,26 @@
     "mobilePhone": "375290000002",
     "email": "test_email@test2",
     "photo": "src\\test\\resources\\stru.png"
+  },
+  {
+    "first_name": "New Contact First Name3",
+    "last_name": "New Contact Last Name3",
+    "mobilePhone": "375290000000",
+    "email": "test_email@test3",
+    "photo": "src\\test\\resources\\stru.png"
+  },
+  {
+    "first_name": "New Contact First Name4",
+    "last_name": "New Contact Last Name4",
+    "mobilePhone": "375290000001",
+    "email": "test_email@test4",
+    "photo": "src\\test\\resources\\stru.png"
+  },
+  {
+    "first_name": "New Contact First Name5",
+    "last_name": "New Contact Last Name5",
+    "mobilePhone": "375290000002",
+    "email": "test_email@test5",
+    "photo": "src\\test\\resources\\stru.png"
   }
 ]

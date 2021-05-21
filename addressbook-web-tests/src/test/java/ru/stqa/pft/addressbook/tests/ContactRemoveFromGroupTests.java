@@ -49,9 +49,19 @@ public class ContactRemoveFromGroupTests extends TestBase{
 
     }
 
-    private ContactData selectContactById(ContactData contact) {
-        Contacts contactsById = app.db().contacts();
-        return contactsById.iterator().next().withId(contact.getId());
+    private ContactData selectContactById(ContactData addContact) {
+        Contacts allContacts     = app.db().contacts();
+        int a = addContact.getId();
+        System.out.println("Искомая айди -" + a);
+
+        //allContacts.stream().filter(c ->c.getId() == a);
+
+        for (ContactData r : allContacts){
+            if (a == r.getId()) {
+                System.out.println("Контакт с нужной айди - " + r);
+                return r;
+            }
+        }return null;
     }
 
 
